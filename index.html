@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SKY BACKGROUND -->
+<div class="sky">
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+<div class="cloud cloud4"></div>
+
+<div class="bird bird1">🐦</div>
+<div class="bird bird2">🐦</div>
+
+</div>
+
+
+<div class="gameCard">
+
+<h1 class="title">🧠 MIND LOGIC</h1>
+
+
+<div id="startScreen">
+
+<h2>Enter Your Name</h2>
+
+<input id="playerName" placeholder="Your name">
+
+<button onclick="startGame()">Start Game</button>
+
+</div>
+
+
+<div id="descScreen" class="hidden">
+
+<h2>Description</h2>
+
+<p>
+Mind Logic is a puzzle game that tests your probability
+and logical reasoning skills.
+</p>
+
+<p>Puzzle 1: Mystery Bag — pick two balls randomly.</p>
+
+<p>Puzzle 2: Logic Puzzle — determine the professions of Ana, Ben and Cara.</p>
+
+<button onclick="startLevel1()">Play</button>
+
+</div>
+
+
+
+<div id="level1" class="hidden">
+
+<h2>🎒 Mystery Bag</h2>
+
+<p>5 Red • 3 Blue • 2 Green</p>
+
+<div class="bag">
+
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+
+<div class="ball blue"></div>
+<div class="ball blue"></div>
+<div class="ball blue"></div>
+
+<div class="ball green"></div>
+<div class="ball green"></div>
+
+</div>
+
+<button onclick="pickBalls()">🎲 Pick 2 Balls</button>
+
+<h3>Your Pick</h3>
+
+<div id="resultBalls" class="result"></div>
+
+<button id="nextBtn" class="hidden" onclick="startLevel2()">Next Puzzle</button>
+
+</div>
+
+
+
+<div id="level2" class="hidden">
+
+<h2>🧩 Who is the Doctor?</h2>
+
+<div class="clues">
+
+<p>1. Anyone who is a doctor studied medicine.</p>
+<p>2. Ben is NOT a teacher.</p>
+<p>3. Ana is NOT an engineer.</p>
+<p>4. Cara is NOT a doctor.</p>
+<p>5. If someone is not a doctor and not an engineer → teacher.</p>
+
+</div>
+
+
+<div class="characters">
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921071.png">
+
+<h3>Ana</h3>
+
+<select id="ana">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921089.png">
+
+<h3>Ben</h3>
+
+<select id="ben">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921124.png">
+
+<h3>Cara</h3>
+
+<select id="cara">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+</div>
+
+<button onclick="checkLogic()">Submit</button>
+
+<p id="logicResult"></p>
+
+</div>
+
+
+
+<div id="endScreen" class="hidden">
+
+<h2 id="finalText"></h2>
+
+<button onclick="location.reload()">Play Again</button>
+
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
