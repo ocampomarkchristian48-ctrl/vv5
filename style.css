@@ -1,0 +1,197 @@
+body{
+margin:0;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+/* SKY */
+
+.sky{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(#87CEEB,#c9ecff);
+z-index:-1;
+overflow:hidden;
+}
+
+/* SUN */
+
+.sun{
+position:absolute;
+width:120px;
+height:120px;
+background:radial-gradient(circle,#fff700,#ffb300);
+border-radius:50%;
+top:40px;
+right:80px;
+box-shadow:0 0 60px rgba(255,200,0,0.7);
+}
+
+/* CLOUD */
+
+.cloud{
+position:absolute;
+background:white;
+border-radius:50px;
+opacity:0.9;
+}
+
+.cloud:before,
+.cloud:after{
+content:"";
+position:absolute;
+background:white;
+border-radius:50%;
+}
+
+.cloud1{
+width:200px;
+height:60px;
+top:20%;
+left:-250px;
+animation:cloudMove 45s linear infinite;
+}
+
+.cloud2{
+width:250px;
+height:70px;
+top:45%;
+left:-300px;
+animation:cloudMove 60s linear infinite;
+}
+
+.cloud3{
+width:180px;
+height:50px;
+top:70%;
+left:-200px;
+animation:cloudMove 55s linear infinite;
+}
+
+.cloud4{
+width:220px;
+height:65px;
+top:10%;
+left:-280px;
+animation:cloudMove 70s linear infinite;
+}
+
+@keyframes cloudMove{
+0%{transform:translateX(0);}
+100%{transform:translateX(150vw);}
+}
+
+/* BIRDS */
+
+.bird{
+position:absolute;
+font-size:28px;
+}
+
+.bird1{
+top:120px;
+left:-50px;
+animation:birdFly 35s linear infinite;
+}
+
+.bird2{
+top:220px;
+left:-80px;
+animation:birdFly 50s linear infinite;
+}
+
+@keyframes birdFly{
+0%{transform:translateX(0);}
+100%{transform:translateX(160vw);}
+}
+
+/* GAME CARD */
+
+.gameCard{
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:350px;
+color:white;
+}
+
+.title{
+font-size:40px;
+}
+
+input{
+padding:10px;
+width:80%;
+border:none;
+border-radius:8px;
+text-align:center;
+}
+
+button{
+margin-top:10px;
+padding:10px 25px;
+border:none;
+border-radius:8px;
+background:#00c3ff;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#009ed1;
+}
+
+.hidden{
+display:none;
+}
+
+/* BALLS */
+
+.bag{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+margin:20px 0;
+}
+
+.ball{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+.red{background:red;}
+.blue{background:blue;}
+.green{background:green;}
+
+.result{
+display:flex;
+gap:20px;
+justify-content:center;
+margin:15px;
+}
+
+.characters{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+}
+
+.person img{
+width:70px;
+}
+
+.clues{
+background:#111;
+padding:10px;
+border-radius:8px;
+font-size:14px;
+}
